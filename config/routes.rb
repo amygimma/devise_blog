@@ -1,4 +1,5 @@
 DeviseBlog::Application.routes.draw do
+  resources :recipes
   devise_for :users
   root "static_pages#home"
   match '/about',   to: "static_pages#about",    via: 'get'
