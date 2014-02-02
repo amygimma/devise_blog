@@ -1,2 +1,22 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+
+<h1>Recipes Index</h1>
+      
+<% @recipes.each do |recipe| %>
+
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <h3><%= recipe.title %></h3>
+    <p>
+      <strong>Estimated Time: </strong><%= recipe.estimated_time %><br>
+      <strong>Notes: </strong><%= recipe.notes %><br>
+      <strong>Instructions: </strong><%= simple_format(recipe.instructions) %><br>
+      <a href="/recipes/<%= recipe.id %>">View</a>
+    </p>
+    <br>
+  </div>
+<% end %>
+
+
+  
+
+
+

@@ -1,0 +1,37 @@
+<div id="wrap"> 
+  <div class="container>
+    <div class="row"
+      <div class="col-md-4">
+        <h1>New Recipe</h1>
+
+        <%= form_for(@recipe) do |f| %>
+
+          <div class="field recipe_form">
+            <ul>
+              <li>
+                <%= f.label :title %>
+                <%= f.text_field :title %>
+              </li>
+              <li>
+                <%= f.label :estimated_time %>
+                <%= f.text_field :estimated_time %>
+              </li>
+              <li>
+                <%= f.label :notes %>
+                <%= f.text_area :notes %>
+              </li>
+              <li>
+                <%= f.label :instructions %>
+                <%= f.text_area :instructions %>
+              </li>
+          </div>
+          <%= f.submit "Save", class: "btn btn-large btn-primary" %>
+        <% end %>
+      </div>
+      <h1>wtf?</h1>
+    
+  
+  <div id="push"></div>
+
+</div> <! -- end wrap -->  
+

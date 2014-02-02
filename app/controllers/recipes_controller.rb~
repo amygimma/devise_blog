@@ -35,10 +35,10 @@ class RecipesController < ApplicationController
   end
 
   def new
+    @recipe = Recipe.new
     if not user_signed_in?
       redirect_to new_user_session_path
     end
-    @recipe = Recipe.new
   end
 
   def edit
